@@ -14,21 +14,10 @@ Download and include the JavaScript file | [full version](https://github.com/Bol
 ```html
 <script src="simpleFetch.min.js"></script>
 ```
-
-# Contribution Guide
-
-```bash
-git clone https://github.com/BolajiAyodeji/simple-fetch-library.git
-```
-```bash
-cd simple-fetch-library
-```
-```bash
-npm install
-```
-```bash
-npm run build
-```
+> Create a new simpleFetch
+ ```js
+ const http = new simpleFetch;
+ ```
 
 # Examples
 
@@ -113,3 +102,17 @@ http.delete("https://jsonplaceholder.typicode.com/users/2")
   .catch(err => console.log(err));
 ```
 
+# Contribution Guide
+
+```bash
+git clone https://github.com/BolajiAyodeji/simple-fetch-library.git
+```
+```bash
+cd simple-fetch-library
+```
+```bash
+npm install
+```
+```bash
+npm run build
+```
