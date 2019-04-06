@@ -31,7 +31,7 @@ const data = {
     }
 };
 
-const http = new simpleFETCH;
+const http = new simpleFETCH();
 
 // Get Request
 button1.addEventListener('click', getReq);
