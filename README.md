@@ -6,6 +6,7 @@
 [![Open Source Helpers](https://www.codetriage.com/bolajiayodeji/simple-fetch-library/badges/users.svg)](https://www.codetriage.com/bolajiayodeji/simple-fetch-library)
 
 </div>
+<br>
 
 # Getting Started
 
