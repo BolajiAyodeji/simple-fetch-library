@@ -1,0 +1,32 @@
+{
+  "name": "simple-fetch-library",
+  "version": "1.0.0",
+  "description": "A simple FETCH API Library for making HTTP Requests",
+  "main": "src/simpleFetch.js",
+  "scripts": {
+    "build": "babel src --out-dir dist -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BolajiAyodeji/simple-ajax-library.git"
+  },
+  "keywords": [
+    "javascript",
+    "fetch library",
+    "http request",
+    "json",
+    "http library",
+    "asynchronous programming"
+  ],
+  "author": "Bolaji Ayodeji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BolajiAyodeji/simple-ajax-library/issues"
+  },
+  "homepage": "https://github.com/BolajiAyodeji/simple-ajax-library#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2"
+  }
+}
