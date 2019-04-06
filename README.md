@@ -6,7 +6,7 @@
 
 # Getting Started
 
-Download and include the JavaScript file | [full version](https://github.com/BolajiAyodeji/simple-ajax-library/blob/master/dist/simpleAjax.js) | [minified](https://github.com/BolajiAyodeji/simple-ajax-library/blob/master/dist/simpleAjax.min.js) | [ES6 version](https://github.com/BolajiAyodeji/simple-ajax-library/blob/master/src/simpleAjax.js) |
+Download and include the JavaScript file | [full version](https://github.com/BolajiAyodeji/simple-fetch-library/blob/master/dist/simpleFetch.js) | [minified](https://github.com/BolajiAyodeji/simple-fetch-library/blob/master/dist/simpleFetch.min.js) | [ES6 version](https://github.com/BolajiAyodeji/simple-fetch-library/blob/master/src/simpleFetch.js) |
 
 ```html
 <script src="simpleFetch.js"></script>
