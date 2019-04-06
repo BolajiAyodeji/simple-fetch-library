@@ -28,14 +28,31 @@ const data = {
     }
 };
 
-const http = new simpleFetch;
+const http = new simpleFETCH;
 
 // Get Request
 button1.addEventListener('click', getReq);
 
 function getReq(e) {
   http.get("https://jsonplaceholder.typicode.com/users")
-    .then(data => console.log(data))
+    .then((data) => {
+      return data;
+    })
+    .then((data) => {
+      console.log(data);
+      let output = '';
+
+      data.map((user) => {
+        output += `
+        <h5>Name: ${user.name}</h5>
+        <li>username: ${user.username}</li>
+        <li>tel: ${user.phone}</li>
+        <li>website: ${user.website}</li>
+        <br>
+        `
+      });
+      display.innerHTML = output;
+    })
     .catch(err => console.log(err));
 
   e.preventDefault();
@@ -46,10 +63,18 @@ button2.addEventListener('click', postReq);
 
 function postReq(e) {
   http.post("https://jsonplaceholder.typicode.com/users", data)
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+  .then((res) => {
+    return res;
+  })
+  .then((res) => {
+    let output = `
+    <pre>${JSON.stringify(res)}</pre>
+    `;
+    display.innerHTML = output;
+  })
+  .catch(err => console.log(err));
 
-  e.preventDefault();
+e.preventDefault();
 }
 
 // PUT Request
@@ -57,10 +82,18 @@ button3.addEventListener('click', putReq);
 
 function putReq(e) {
   http.put("https://jsonplaceholder.typicode.com/users/2", data)
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+  .then((data) => {
+    return data;
+  })
+  .then((res) => {
+    let output = `
+    <pre>${JSON.stringify(res)}</pre>
+    `;
+    display.innerHTML = output;
+  })
+  .catch(err => console.log(err));
 
-  e.preventDefault();
+e.preventDefault();
 }
 
 // DELETE Request
@@ -68,8 +101,13 @@ button4.addEventListener('click', delReq);
 
 function delReq(e) {
   http.delete("https://jsonplaceholder.typicode.com/users/2")
-  .then(() => console.log(data))
+  .then((data) => {
+    return data;
+  })
+  .then((data) => {
+    display.innerHTML = data;
+  })
   .catch(err => console.log(err));
 
-  e.preventDefault();
+e.preventDefault();
 }
