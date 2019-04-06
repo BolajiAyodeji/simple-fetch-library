@@ -97,6 +97,9 @@ http.delete("https://jsonplaceholder.typicode.com/users/2")
   .catch(err => console.log(err));
 ```
 
+# Demo
+Demo [here](https://bolajiayodeji.github.io/simple-fetch-library/demo/)
+
 # Contribution Guide
 
 ```bash
