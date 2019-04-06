@@ -35,14 +35,9 @@ npm run build
 * GET Request
 
 ```js
-posts = http.get('https://jsonplaceholder.typicode.com/posts',
-(err, posts) => {
-  if(err) {
-    console.log(err)
-  } else {
-  console.log(posts);
-  }
-});
+http.get("https://jsonplaceholder.typicode.com/users")
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 ```
 <br>
 
@@ -50,19 +45,31 @@ posts = http.get('https://jsonplaceholder.typicode.com/posts',
 
 ```js
 const data = {
-  userId: 101,
-  title: 'Custom post',
-  body: 'This is a custom post'
+    "name": "Bolaji Ayodeji",
+    "username": "bolajiayodeji",
+    "email": "hi@bolajiayodeji.com",
+    "address": {
+      "street": "Hello world",
+      "suite": "Hello",
+      "city": "Lokoja, Kogi",
+      "zipcode": "xxx-xxx-xxx",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "+234 8109445504",
+    "website": "https://bolajiayodeji.com",
+    "company": {
+      "name": "PhilanthroLab",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
 };
 
-http.post('https://jsonplaceholder.typicode.com/posts',
-data, (err, post) => {
-  if(err) {
-    console.log(err)
-  } else {
-    console.log(post);
-  }
-});
+http.post("https://jsonplaceholder.typicode.com/users", data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 ```
 <br>
 
@@ -70,32 +77,39 @@ data, (err, post) => {
 
 ```js
 const data = {
-  userId: 101,
-  title: 'Custom post',
-  body: 'This is a custom post'
+    "name": "Bolaji Ayodeji",
+    "username": "bolajiayodeji",
+    "email": "hi@bolajiayodeji.com",
+    "address": {
+      "street": "Hello world",
+      "suite": "Hello",
+      "city": "Lokoja, Kogi",
+      "zipcode": "xxx-xxx-xxx",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "+234 8109445504",
+    "website": "https://bolajiayodeji.com",
+    "company": {
+      "name": "PhilanthroLab",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
 };
 
-http.put('https://jsonplaceholder.typicode.com/posts/1',
-data, (err, post) => {
-  if(err) {
-    console.log(err)
-  } else {
-    console.log(post);
-  }
-});
+http.put("https://jsonplaceholder.typicode.com/users/2", data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 ```
 <br>
 
 * DELETE Request
 
 ```js
-posts = http.delete('https://jsonplaceholder.typicode.com/posts/1',
-(err, response) => {
-  if(err) {
-    console.log(err)
-  } else {
-  console.log(response);
-  }
-});
+http.delete("https://jsonplaceholder.typicode.com/users/2")
+  .then(() => console.log(data))
+  .catch(err => console.log(err));
 ```
 
