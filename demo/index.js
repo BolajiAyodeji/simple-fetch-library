@@ -3,7 +3,10 @@ const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
-const display = document.getElementById('output');
+const outputGet = document.getElementById('output-get');
+const outputPost = document.getElementById('output-post');
+const outputPut = document.getElementById('output-put');
+const outputDelete = document.getElementById('output-delete');
 
 const data = {
     "name": "Bolaji Ayodeji",
@@ -40,18 +43,8 @@ function getReq(e) {
     })
     .then((data) => {
       console.log(data);
-      let output = '';
 
-      data.map((user) => {
-        output += `
-        <h5>Name: ${user.name}</h5>
-        <li>username: ${user.username}</li>
-        <li>tel: ${user.phone}</li>
-        <li>website: ${user.website}</li>
-        <br>
-        `
-      });
-      display.innerHTML = output;
+      outputGet.innerHTML = `<pre><code>${JSON.stringify(data, null, 2)}</code></pre>`;
     })
     .catch(err => console.log(err));
 
@@ -68,9 +61,9 @@ function postReq(e) {
   })
   .then((res) => {
     let output = `
-    <pre>${JSON.stringify(res)}</pre>
+    <pre><code>${JSON.stringify(res, null, 2)}</code></pre>
     `;
-    display.innerHTML = output;
+    outputPost.innerHTML = output;
   })
   .catch(err => console.log(err));
 
@@ -87,9 +80,9 @@ function putReq(e) {
   })
   .then((res) => {
     let output = `
-    <pre>${JSON.stringify(res)}</pre>
+    <pre><code>${JSON.stringify(res, null, 2)}</code></pre>
     `;
-    display.innerHTML = output;
+    outputPut.innerHTML = output;
   })
   .catch(err => console.log(err));
 
@@ -105,7 +98,7 @@ function delReq(e) {
     return data;
   })
   .then((data) => {
-    display.innerHTML = data;
+    outputDelete.innerHTML = `<code>${data}</code>`;
   })
   .catch(err => console.log(err));
 
