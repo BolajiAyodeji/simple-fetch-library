@@ -14,6 +14,10 @@ Download and include the JavaScript file | [full version](https://github.com/Bol
 ```html
 <script src="simpleFetch.min.js"></script>
 ```
+Create a new simpleFetch
+```js
+const http = new simpleFetch;
+```
 
 # Contribution Guide
 
