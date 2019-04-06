@@ -19,21 +19,6 @@ Download and include the JavaScript file | [full version](https://github.com/Bol
  const http = new simpleFetch;
  ```
 
-# Contribution Guide
-
-```bash
-git clone https://github.com/BolajiAyodeji/simple-fetch-library.git
-```
-```bash
-cd simple-fetch-library
-```
-```bash
-npm install
-```
-```bash
-npm run build
-```
-
 # Examples
 
 * GET Request
@@ -117,3 +102,17 @@ http.delete("https://jsonplaceholder.typicode.com/users/2")
   .catch(err => console.log(err));
 ```
 
+# Contribution Guide
+
+```bash
+git clone https://github.com/BolajiAyodeji/simple-fetch-library.git
+```
+```bash
+cd simple-fetch-library
+```
+```bash
+npm install
+```
+```bash
+npm run build
+```
